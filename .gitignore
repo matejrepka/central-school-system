@@ -1,0 +1,13 @@
+# Ignore local configuration (contains secrets)
+config.php
+
+# Ignore editor and OS files
+.vscode/
+Thumbs.db
+Desktop.ini
+
+# Ignore PHP error/log files
+error.log
+
+# Ignore OneDrive and system files
+~$*
