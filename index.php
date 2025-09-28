@@ -50,6 +50,9 @@ try {
     <div id="userBanner">
       <?php if (!empty($_SESSION['username'])): ?>
         <span class="user-text">Prihlásený ako <strong><?php echo htmlspecialchars($_SESSION['username'], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); ?></strong></span>
+        <?php if (!empty($_SESSION['username']) && $_SESSION['username'] === 'admin'): ?>
+          <a href="admin.php" class="small" style="margin-left:8px">Admin</a>
+        <?php endif; ?>
         <button id="logoutBtn" class="small" aria-label="Odhlásiť">Odhlásiť</button>
       <?php else: ?>
         <a href="login.php" class="small">Prihlásiť sa</a>
